@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.5.42 Release - RuneLite</title><meta name="description" content="Woodcutting respawn timer, pet entity hider, Twisted League support"><meta name="author" content="Jordan"><script type="text/javascript">!function(i){if(i.search){var a={};i.search.slice(1).split("&").forEach((function(i){var l=i.split("=");a[l[0]]=l.slice(1).join("=").replace(/~and~/g,"&")})),void 0!==a.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(a.p||"")+(a.q?"?"+a.q:"")+i.hash)}}(window.location)</script><link href="/static/css/2.0d21f304.chunk.css" rel="stylesheet"><link href="/static/css/main.eff5384d.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/static/css/5.e2ed0cde.chunk.css"><script charset="utf-8" src="/static/js/5.93d1b4b4.chunk.js"></script><script charset="utf-8" src="/static/js/110.3ac7ded8.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-dark"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/runelite_logo_transparent.png" class="icon" alt="RuneLite"> </a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features">Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog">Blog</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/pulse">Pulse</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki">Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown">API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/http-service/">RuneLite HTTP API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag">Tags</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/plugin-hub">Plugin Hub</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite">Become a patron</a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://runelite.net/discord" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button">Login</button></form></li></ul></div></nav><div class="container" id="layout"><section id="blog"><div class="content-section"><div class="page-header"><h1>1.5.42 Release</h1><p class="text-muted"><span title="Thu Nov 28 2019 10:00:00 GMT+0000 (Coordinated Universal Time)">10 months ago</span> by Jordan</p></div><div class="markdown-body news-page"><div><p>The <a href="https://github.com/runelite/runelite/wiki/Woodcutting" native="">Woodcutting plugin</a> now supports showing
+respawn timers for chopped trees. Thanks to <a href="https://github.com/Dava96" native="">Dava96</a> for this
+contribution.</p>
+<p><img src="/img/blog/1.5.42-Release/woodcutting-respawn-timer.gif" alt="Woodcutting plugin tree respawn timer"></p>
+<p>The <a href="https://github.com/runelite/runelite/wiki/Entity-Hider" native="">Entity Hider plugin</a> has an added
+option to hide the pets of other players. Thanks to <a href="https://github.com/Trevor159" native="">Trevor</a> for this
+addition!</p>
+<p><a href="https://streamable.com/d6yfl" native=""><img src="/img/blog/1.5.42-Release/hide-pets.png" alt="Entity hider pet toggle"></a></p>
+<p>We've added support for Twisted Leagues:</p>
+<ul>
+<li><a href="https://github.com/runelite/runelite/wiki/Screenshot" native="">Screenshots</a> are named properly for leagues</li>
+<li><a href="https://github.com/runelite/runelite/wiki/HiScore" native="">The HiScore plugin</a> recognizes the leagues
+leaderboard and displays league points. <a href="https://github.com/runelite/runelite/wiki/Opponent-Information" native="">Opponent
+lookup</a> will use this leaderboard,
+and <a href="https://github.com/runelite/runelite/wiki/XP-Tracker" native="">changing worlds to or from a League world will properly reset your XP
+Tracker</a>.</li>
+<li><a href="https://github.com/runelite/runelite/wiki/Clue-Scroll" native="">Hot-cold clues found in the Twisted
+League</a> will properly start when read</li>
+<li>The <a href="https://github.com/runelite/runelite/wiki/Death-Indicator" native="">Death Indicator
+plugin</a> has learned the Twisted League
+respawn location and now works in Twisted Leagues.</li>
+<li>Your <a href="https://github.com/runelite/runelite/wiki/Regeneration-Meter" native="">HP regen meter</a> will update
+at the appropriate accelerated rate <a href="https://oldschool.runescape.wiki/w/Endless_Endurance" native="">if you are in the
+#endurancegang</a></li>
+<li><a href="https://github.com/runelite/runelite/wiki/Chat-History" native="">Chat history</a> will display correctly when
+logging in to a Twisted League world</li>
+<li>Teleporting with the Kourend home teleport <a href="https://github.com/runelite/runelite/wiki/Timers" native="">will now correctly add a Home Teleport cooldown
+timer</a></li>
+</ul>
+<p>Finally, a <a href="https://github.com/runelite/runelite/wiki/League-Chat-Icons" native="">League Chat Icons plugin</a>
+has been added which can help players distinguish between League players and ironmen in the main
+game. Thanks to <a href="https://github.com/hsamoht" native="">hsamoht</a> for this new plugin.</p>
+<p><img src="/img/blog/1.5.42-Release/league-chat.png" alt="leaguechat"></p>
+<p>The <a href="https://github.com/runelite/runelite/wiki/Chambers-of-Xeric" native="">Chambers of Xeric plugin</a> has had
+its rotation whitelist format updated. Now, instead of formatting whitelisted rotations as a list
+of bracket-encapsulated rotations (eg. <code>[muttadiles, shamans, mystics][vespula, tekton, vasa]</code>),
+they should have the brackets removed and be put on a new line per rotation, like the following:</p>
+<pre><code>muttadiles, shamans, mystics
+vespula, tekton, vasa
+</code></pre>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li><a href="https://github.com/runelite/runelite/wiki/Object-Markers" native="">Object markers</a> marking objects which
+can change into other objects can be properly removed</li>
+<li>The <a href="https://github.com/runelite/runelite/wiki/Rune-Pouch" native="">Rune Pouch overlay</a> now displays your
+stored runes on both the normal Rune pouch and the Rune pouch (l)</li>
+<li>The <a href="https://github.com/runelite/runelite/wiki/Screenshot" native="">Screenshot plugin</a> can now take
+automatic screenshots when a player on your friends list or in your clan dies near you to help
+ensure they can re-experience their death</li>
+<li>Teleport sound effects have been classified as "Others' area sounds" for the purpose of muting via <a href="https://github.com/runelite/runelite/wiki/Music" native="">the
+Music plugin</a></li>
+<li>You can now configure the <a href="https://github.com/runelite/runelite/wiki/FPS-Control" native="">FPS Control
+plugin</a> to limit your FPS to two different
+amounts when the game is focused or unfocused.</li>
+<li>The <img src="https://raw.githubusercontent.com/dekvall/twemoji/runelite-emoji/runelite-emoji/1f926.png" alt="Woman face-palmingemoji">
+facepalm emoji has been added to the <a href="https://github.com/runelite/runelite/wiki/Emojis" native="">Emojis
+plugin</a> as the emoticon <code>M-)</code></li>
+<li>The client now continues to <a href="https://github.com/runelite/runelite/wiki/RuneLite#flash-notification" native="">flash
+notifications</a> until it
+becomes focused (instead of clearing notifications by only mousing over the window)</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Jordan</p>
+<h3>New commits</h3>
+<p>We had 14 contributors this release!</p>
+<pre><code>15987632 (1):
+      entity hider plugin: add support for hiding pets
+
+Adam (34):
+      raid plugin: fix layout command room order
+      Remove SEASONAL_DEADMAN world type
+      Remove DEADMAN_TOURNAMENT world type
+      http api: update hiscore for leagues
+      api: add league world type
+      hiscore plugin: add leagues
+      world hopper: assign leagues world color
+      screenshot plugin: add League folder
+      opponent info: add league hiscore endpoint
+      xptracker: add league world type
+      chat commands: add support for league hiscores
+      rotation solver: fix to use modulus instead of remainder operator
+      clue plugin: add support for league hotcold clues
+      woodcutting plugin: add respawn timer
+      api: add welcome chat message type
+      raids plugin: fix matching rotation whitelist
+      api: use region size constant in getRegionOffset
+      object indicators: use WorldPoint getRegionX/Y
+      object markers: fix removing markers from multilocs
+      api: refactor to use NameableContainer
+      client: refactor for nameable api changes
+      clan manager: use clanmember manager find to lookup rank
+      client: add backup jav_config support
+      world client: always return non null or throw an error
+      client: use mock webserver for client config loader test
+      hostsupplier: only supply regular f2p or p2p worlds
+      chat controller: limit layouts to 16 rooms
+      raids plugin: limit layout message to 300 characters
+      api: add npc composition isInteractible
+      npc highlight: skip noninteractiable npcs
+      npc highlight: fix npc interactible check
+      keyremapping: only update chatbox input and not player name
+      client: add world service to manage world fetching
+      add leagues chat icon plugin
+
+Austin Lee (2):
+      Add Bird Houses to crafting skill calculator (#10306)
+      Add support for rune pouch (l) to rune pouch overlay (#10331)
+
+HSJ-OSRS (1):
+      screenshot plugin: add friend/clan member death screenshotting
+
+Hydrox6 (1):
+      inventory grid: use correct item quantities for drag previews
+
+Jay (1):
+      music plugin: reclassify teleport sfx as other players' area effects instead of environmental area effects
+
+Max Weber (3):
+      runelite-client: use privateLookupIn for invokespecialing defaults
+      runelite-client: Use archive-patcher for the client-patch
+      ClientLoader: Don't force the bootstrap classloader
+
+Seth (2):
+      death indicator: add Kourend respawn region
+      regen meter: add support for endless endurance relic
+
+al3x-huang (1):
+      fpsplugin: Add multiple FPS targets for multiple modes (#10239)
+
+chestnut1693 (1):
+      loottracker plugin: fix typo
+
+dekvall (2):
+      emojis: add facepalm emoji
+      attack styles: add test for swap between bludgeon and bow
+
+emiljensen2 (1):
+      notifier: require client to be focused to cancel notifications
+
+seth (2):
+      chathistory: update welcome message matching to include leagues
+      Add kourend home teleport to timers plugin
+
+winterdaze (1):
+      Shorten NMZ overlay text to prevent overlapping (#10241)
+</code></pre>
+</div></div></div></section><section id="footer"><div class="content-section"><footer><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></footer></div></section></div></div></div><script>!function(e){function c(c){for(var d,t,n=c[0],o=c[1],b=c[2],u=0,l=[];u<n.length;u++)t=n[u],Object.prototype.hasOwnProperty.call(a,t)&&a[t]&&l.push(a[t][0]),a[t]=0;for(d in o)Object.prototype.hasOwnProperty.call(o,d)&&(e[d]=o[d]);for(i&&i(c);l.length;)l.shift()();return r.push.apply(r,b||[]),f()}function f(){for(var e,c=0;c<r.length;c++){for(var f=r[c],d=!0,t=1;t<f.length;t++){var o=f[t];0!==a[o]&&(d=!1)}d&&(r.splice(c--,1),e=n(n.s=f[0]))}return e}var d={},t={1:0},a={1:0},r=[];function n(c){if(d[c])return d[c].exports;var f=d[c]={i:c,l:!1,exports:{}};return e[c].call(f.exports,f,f.exports,n),f.l=!0,f.exports}n.e=function(e){var c=[];t[e]?c.push(t[e]):0!==t[e]&&{4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1}[e]&&c.push(t[e]=new Promise((function(c,f){for(var d="static/css/"+({}[e]||e)+"."+{3:"31d6cfe0",4:"515ef527",5:"e2ed0cde",6:"e2ed0cde",7:"1c483d4f",8:"93df7b57",9:"4bba8a88",10:"6e584a29",11:"b9c448b7",12:"68f5ba8f",13:"9deaab4c",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",85:"31d6cfe0",86:"31d6cfe0",87:"31d6cfe0",88:"31d6cfe0",89:"31d6cfe0",90:"31d6cfe0",91:"31d6cfe0",92:"31d6cfe0",93:"31d6cfe0",94:"31d6cfe0",95:"31d6cfe0",96:"31d6cfe0",97:"31d6cfe0",98:"31d6cfe0",99:"31d6cfe0",100:"31d6cfe0",101:"31d6cfe0",102:"31d6cfe0",103:"31d6cfe0",104:"31d6cfe0",105:"31d6cfe0",106:"31d6cfe0",107:"31d6cfe0",108:"31d6cfe0",109:"31d6cfe0",110:"31d6cfe0",111:"31d6cfe0",112:"31d6cfe0",113:"31d6cfe0",114:"31d6cfe0",115:"31d6cfe0",116:"31d6cfe0",117:"31d6cfe0",118:"31d6cfe0",119:"31d6cfe0",120:"31d6cfe0",121:"31d6cfe0",122:"31d6cfe0",123:"31d6cfe0",124:"31d6cfe0",125:"31d6cfe0",126:"31d6cfe0",127:"31d6cfe0",128:"31d6cfe0",129:"31d6cfe0",130:"31d6cfe0",131:"31d6cfe0"}[e]+".chunk.css",a=n.p+d,r=document.getElementsByTagName("link"),o=0;o<r.length;o++){var b=(i=r[o]).getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(b===d||b===a))return c()}var u=document.getElementsByTagName("style");for(o=0;o<u.length;o++){var i;if((b=(i=u[o]).getAttribute("data-href"))===d||b===a)return c()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=c,l.onerror=function(c){var d=c&&c.target&&c.target.src||a,r=new Error("Loading CSS chunk "+e+" failed.\n("+d+")");r.code="CSS_CHUNK_LOAD_FAILED",r.request=d,delete t[e],l.parentNode.removeChild(l),f(r)},l.href=a,document.getElementsByTagName("head")[0].appendChild(l)})).then((function(){t[e]=0})));var f=a[e];if(0!==f)if(f)c.push(f[2]);else{var d=new Promise((function(c,d){f=a[e]=[c,d]}));c.push(f[2]=d);var r,o=document.createElement("script");o.charset="utf-8",o.timeout=120,n.nc&&o.setAttribute("nonce",n.nc),o.src=function(e){return n.p+"static/js/"+({}[e]||e)+"."+{3:"1123361e",4:"9646f3ef",5:"93d1b4b4",6:"c8ad652f",7:"efe335d4",8:"1533feba",9:"cdc2710a",10:"f3090148",11:"b402f04f",12:"c0e04186",13:"d1c55f5c",14:"346994e1",15:"20a39f3e",16:"cf3eea55",17:"b4eeaf99",18:"18e52dc6",19:"cdfee9e1",20:"048d61a6",21:"7571446a",22:"8633a9c8",23:"2c4b63f2",24:"a191372b",25:"08cb8c35",26:"f5a87a5a",27:"7cb7867f",28:"b356faa2",29:"4853be02",30:"6991baea",31:"58749ee1",32:"40e25b8b",33:"414aa5fe",34:"552920e8",35:"bc2811e0",36:"9ff1bf64",37:"a0baf000",38:"839b4bce",39:"d1608d8c",40:"7e1b5efb",41:"a6cad6a2",42:"45d3dd2c",43:"1ddcf268",44:"ea8f2640",45:"c880cc15",46:"2b0a750a",47:"7623f557",48:"c7a0cb56",49:"af85820b",50:"e7546b26",51:"8d4e93e6",52:"42fb453d",53:"b6db6d88",54:"26d53ebd",55:"4a2a29cc",56:"56aaaf8b",57:"ccbf9c45",58:"80de06ed",59:"e0dcba5d",60:"3fa08273",61:"a460ea88",62:"9f6c901d",63:"6454c5ba",64:"b445014d",65:"721873ed",66:"0bda2302",67:"584c09e2",68:"95fc7ad2",69:"31236d04",70:"023d706e",71:"4cf11354",72:"8b18cbda",73:"e017e1e2",74:"8b280f2c",75:"b2db7377",76:"95bf9fa6",77:"27b83c8b",78:"ae0e30e6",79:"53ecb394",80:"4db4cc41",81:"fcb8ddf2",82:"4fbc8e99",83:"81369d00",84:"e2fea302",85:"22b06920",86:"ee13ab25",87:"e104d1ba",88:"28103e06",89:"9b4a6ea0",90:"44c4335b",91:"8870d935",92:"2abf0a23",93:"b9963d51",94:"e255782d",95:"0e5a7be7",96:"3e73258c",97:"dc868808",98:"1ce9adc7",99:"e6f7d9ce",100:"1c39c224",101:"8003e80a",102:"39f9e615",103:"c6f4daf5",104:"0cf6aa2e",105:"db97211d",106:"31f3d111",107:"3fdb00a5",108:"2cdcff52",109:"63733fbd",110:"3ac7ded8",111:"c3c15dc6",112:"d2619950",113:"6c49f81a",114:"69248555",115:"abb696f9",116:"afc118fd",117:"61765691",118:"ed87be87",119:"e9351a70",120:"2f6f2d13",121:"3a338abe",122:"4530de56",123:"52846dac",124:"8cbc918e",125:"6dea47a3",126:"b6c9a0c2",127:"0dc60a0f",128:"7f38616e",129:"bf21a6e9",130:"0486a329",131:"fc6666dd"}[e]+".chunk.js"}(e);var b=new Error;r=function(c){o.onerror=o.onload=null,clearTimeout(u);var f=a[e];if(0!==f){if(f){var d=c&&("load"===c.type?"missing":c.type),t=c&&c.target&&c.target.src;b.message="Loading chunk "+e+" failed.\n("+d+": "+t+")",b.name="ChunkLoadError",b.type=d,b.request=t,f[1](b)}a[e]=void 0}};var u=setTimeout((function(){r({type:"timeout",target:o})}),12e4);o.onerror=o.onload=r,document.head.appendChild(o)}return Promise.all(c)},n.m=e,n.c=d,n.d=function(e,c,f){n.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,c){if(1&c&&(e=n(e)),8&c)return e;if(4&c&&"object"==typeof e&&e&&e.__esModule)return e;var f=Object.create(null);if(n.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:e}),2&c&&"string"!=typeof e)for(var d in e)n.d(f,d,function(c){return e[c]}.bind(null,d));return f},n.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(c,"a",c),c},n.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},n.p="/",n.oe=function(e){throw console.error(e),e};var o=this["webpackJsonprunelite.net"]=this["webpackJsonprunelite.net"]||[],b=o.push.bind(o);o.push=c,o=o.slice();for(var u=0;u<o.length;u++)c(o[u]);var i=b;f()}([])</script><script src="/static/js/2.fae22976.chunk.js"></script><script src="/static/js/main.75e060a7.chunk.js"></script></body></html>

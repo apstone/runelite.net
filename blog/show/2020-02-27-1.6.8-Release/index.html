@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.6.8 Release - RuneLite</title><meta name="description" content="GE bank tag search, world map mining tooltips, and new UI scaling options"><meta name="author" content="Adam"><script type="text/javascript">!function(i){if(i.search){var a={};i.search.slice(1).split("&").forEach((function(i){var l=i.split("=");a[l[0]]=l.slice(1).join("=").replace(/~and~/g,"&")})),void 0!==a.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(a.p||"")+(a.q?"?"+a.q:"")+i.hash)}}(window.location)</script><link href="/static/css/2.0d21f304.chunk.css" rel="stylesheet"><link href="/static/css/main.eff5384d.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/static/css/5.e2ed0cde.chunk.css"><script charset="utf-8" src="/static/js/5.93d1b4b4.chunk.js"></script><script charset="utf-8" src="/static/js/118.ed87be87.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-dark"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/runelite_logo_transparent.png" class="icon" alt="RuneLite"> </a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features">Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog">Blog</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/pulse">Pulse</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki">Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown">API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/http-service/">RuneLite HTTP API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag">Tags</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/plugin-hub">Plugin Hub</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite">Become a patron</a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://runelite.net/discord" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button">Login</button></form></li></ul></div></nav><div class="container" id="layout"><section id="blog"><div class="content-section"><div class="page-header"><h1>1.6.8 Release</h1><p class="text-muted"><span title="Thu Feb 27 2020 10:00:00 GMT+0000 (Coordinated Universal Time)">7 months ago</span> by Adam</p></div><div class="markdown-body news-page"><div><p>Bank tags can now be searched in the GE:</p>
+<p><img src="/img/blog/1.6.8-Release/getags.png" alt="getags"></p>
+<p>The world map now has tooltips for mining site locations which shows which rocks are there:</p>
+<p><img src="/img/blog/1.6.8-Release/mining.png" alt="mining"></p>
+<p>The blast furnace overlay now includes the time until the coffer runs out of GP:</p>
+<p><img src="/img/blog/1.6.8-Release/blastfurnace.png" alt="blastfurnace"></p>
+<p>The GPU plugin now includes additional UI scaling options which can result in clearer images on higher resolution displays.
+If you were using the stretched mode plugin with the <code>Increased performance mode</code> option <em>and</em> the GPU plugin,
+you may want to change the GPU UI scaling option to <code>Nearest</code>.</p>
+<p>The plugin hub has a new <a href="https://runelite.net/plugin-hub" native="">webpage</a> which shows all of the plugins available on it.</p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>GE buy limits are now automatically pulled from the wiki</li>
+<li>The item stats plugin can now show item stats when hovering items in the bank</li>
+<li>The pensive emoji has been added to the emoji plugin (<code>V_V</code>)</li>
+<li>Item price tooltips now work in the seed vault</li>
+<li>Inventory tags now has 2 additional tag groups</li>
+<li>Fix the loottrackker show/hide ignored loot button</li>
+<li>Fix the always stack resizable stones interface styles option</li>
+<li>Add bounty hunter (rogue) and LMS chat commands</li>
+<li>Fix incorrectly hiding salamander attack styles with the attackstyles plugin</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3>New commits</h3>
+<p>We had 22 contributors this release!</p>
+<pre><code>Adam (4):
+      configmanager: harden against being killed mid-save
+      Merge protocol and protocol-api into cache-client
+      Use GE limits from item stats
+      session: add logged-in tracking
+
+Alfred Ababio (1):
+      skill calc: add long and curved bones to construction calc
+
+Ben Dol (3):
+      itemstats: Round item values for displaying
+      itemstats: Add "Show Stats In Bank" option
+      itemstats: Add "Always Show Base Stats" option
+
+Daniel (1):
+      blast furnace: add coffer time remaining overlay
+
+DeliciousLunch55 (2):
+      clue plugin: Improve Shilo Village elite coordinate clue hint
+      xpdrop plugin: add 'prayer' to tags
+
+Evan Walden (1):
+      item prices: show tooltips in the seed vault
+
+Henry Darnell (1):
+      emoji: add pensive emoji
+
+Hydrox6 (1):
+      slayer: fix boss task parsing to support Konar
+
+James Carroll (1):
+      Thread Desktop browse and open
+
+Jeremy Plsek (1):
+      plugin hub panel: add url to help tooltip and add missing space to warning
+
+Jordan Atwood (5):
+      ClueScrollPlugin: Reset clue on empty dev command
+      clues: Don't return clue instances for empty text
+      cluescroll plugin: Clear stale location clue hint arrows
+      util: Create RSTimeUnit enum
+      plugins: Use RSTimeUnit util where applicable
+
+Krysa (1):
+      inventory tags: add 2 additional color groups
+
+Max Weber (2):
+      PluginManager: try/catch Throwable all the plugin startup stuff
+      loottracker: fix hide/show ignored items button
+
+Rolf Don (1):
+      skill calc: strip out non-digits characters
+
+Ron Young (5):
+      runelite-api: add GE search event and variables
+      ItemVariations: add reverse mapping of variations
+      banktags: add tag searching for ge search
+      banktags: add tests
+      LayoutResizableStones: fix bad script merge
+
+Sander de Groot (1):
+      chat commands: add Bounty Hunter, Bounty Hunter Rogue, and Last Man Standing commands
+
+Seth (1):
+      clue plugin: update Trollweiss cryptic clue hint to include a sled
+
+Trevor (1):
+      client: add notification fired event
+
+dekvall (4):
+      attackstyles: fix salamander magic attacks
+      inventorygrid: re-add a delay to showing the overlay
+      worldmap: support multiline tooltips
+      worldmap: add informative mining site tooltip
+
+kmutchnick (4):
+      clue plugin: add new Slepe anagram clue
+      skill calc: fix skill requirement for compost potions
+      clue plugin: update solution text for deep wilderness dungeon cryptic clue
+      clue plugin: add pet rock and rune thrownaxe to DK clue
+
+ln (1):
+      gpu: add UI bicubic &amp; xBR rescaling
+
+seth (2):
+      AgilityShortcut: update Arceuus essence agility shortcut coordinates
+      QuestStartLocation: Update The forsaken tower/roving elves quest coordinates
+</code></pre>
+</div></div></div></section><section id="footer"><div class="content-section"><footer><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></footer></div></section></div></div></div><script>!function(e){function c(c){for(var d,t,n=c[0],o=c[1],b=c[2],u=0,l=[];u<n.length;u++)t=n[u],Object.prototype.hasOwnProperty.call(a,t)&&a[t]&&l.push(a[t][0]),a[t]=0;for(d in o)Object.prototype.hasOwnProperty.call(o,d)&&(e[d]=o[d]);for(i&&i(c);l.length;)l.shift()();return r.push.apply(r,b||[]),f()}function f(){for(var e,c=0;c<r.length;c++){for(var f=r[c],d=!0,t=1;t<f.length;t++){var o=f[t];0!==a[o]&&(d=!1)}d&&(r.splice(c--,1),e=n(n.s=f[0]))}return e}var d={},t={1:0},a={1:0},r=[];function n(c){if(d[c])return d[c].exports;var f=d[c]={i:c,l:!1,exports:{}};return e[c].call(f.exports,f,f.exports,n),f.l=!0,f.exports}n.e=function(e){var c=[];t[e]?c.push(t[e]):0!==t[e]&&{4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1}[e]&&c.push(t[e]=new Promise((function(c,f){for(var d="static/css/"+({}[e]||e)+"."+{3:"31d6cfe0",4:"515ef527",5:"e2ed0cde",6:"e2ed0cde",7:"1c483d4f",8:"93df7b57",9:"4bba8a88",10:"6e584a29",11:"b9c448b7",12:"68f5ba8f",13:"9deaab4c",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",85:"31d6cfe0",86:"31d6cfe0",87:"31d6cfe0",88:"31d6cfe0",89:"31d6cfe0",90:"31d6cfe0",91:"31d6cfe0",92:"31d6cfe0",93:"31d6cfe0",94:"31d6cfe0",95:"31d6cfe0",96:"31d6cfe0",97:"31d6cfe0",98:"31d6cfe0",99:"31d6cfe0",100:"31d6cfe0",101:"31d6cfe0",102:"31d6cfe0",103:"31d6cfe0",104:"31d6cfe0",105:"31d6cfe0",106:"31d6cfe0",107:"31d6cfe0",108:"31d6cfe0",109:"31d6cfe0",110:"31d6cfe0",111:"31d6cfe0",112:"31d6cfe0",113:"31d6cfe0",114:"31d6cfe0",115:"31d6cfe0",116:"31d6cfe0",117:"31d6cfe0",118:"31d6cfe0",119:"31d6cfe0",120:"31d6cfe0",121:"31d6cfe0",122:"31d6cfe0",123:"31d6cfe0",124:"31d6cfe0",125:"31d6cfe0",126:"31d6cfe0",127:"31d6cfe0",128:"31d6cfe0",129:"31d6cfe0",130:"31d6cfe0",131:"31d6cfe0"}[e]+".chunk.css",a=n.p+d,r=document.getElementsByTagName("link"),o=0;o<r.length;o++){var b=(i=r[o]).getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(b===d||b===a))return c()}var u=document.getElementsByTagName("style");for(o=0;o<u.length;o++){var i;if((b=(i=u[o]).getAttribute("data-href"))===d||b===a)return c()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=c,l.onerror=function(c){var d=c&&c.target&&c.target.src||a,r=new Error("Loading CSS chunk "+e+" failed.\n("+d+")");r.code="CSS_CHUNK_LOAD_FAILED",r.request=d,delete t[e],l.parentNode.removeChild(l),f(r)},l.href=a,document.getElementsByTagName("head")[0].appendChild(l)})).then((function(){t[e]=0})));var f=a[e];if(0!==f)if(f)c.push(f[2]);else{var d=new Promise((function(c,d){f=a[e]=[c,d]}));c.push(f[2]=d);var r,o=document.createElement("script");o.charset="utf-8",o.timeout=120,n.nc&&o.setAttribute("nonce",n.nc),o.src=function(e){return n.p+"static/js/"+({}[e]||e)+"."+{3:"1123361e",4:"9646f3ef",5:"93d1b4b4",6:"c8ad652f",7:"efe335d4",8:"1533feba",9:"cdc2710a",10:"f3090148",11:"b402f04f",12:"c0e04186",13:"d1c55f5c",14:"346994e1",15:"20a39f3e",16:"cf3eea55",17:"b4eeaf99",18:"18e52dc6",19:"cdfee9e1",20:"048d61a6",21:"7571446a",22:"8633a9c8",23:"2c4b63f2",24:"a191372b",25:"08cb8c35",26:"f5a87a5a",27:"7cb7867f",28:"b356faa2",29:"4853be02",30:"6991baea",31:"58749ee1",32:"40e25b8b",33:"414aa5fe",34:"552920e8",35:"bc2811e0",36:"9ff1bf64",37:"a0baf000",38:"839b4bce",39:"d1608d8c",40:"7e1b5efb",41:"a6cad6a2",42:"45d3dd2c",43:"1ddcf268",44:"ea8f2640",45:"c880cc15",46:"2b0a750a",47:"7623f557",48:"c7a0cb56",49:"af85820b",50:"e7546b26",51:"8d4e93e6",52:"42fb453d",53:"b6db6d88",54:"26d53ebd",55:"4a2a29cc",56:"56aaaf8b",57:"ccbf9c45",58:"80de06ed",59:"e0dcba5d",60:"3fa08273",61:"a460ea88",62:"9f6c901d",63:"6454c5ba",64:"b445014d",65:"721873ed",66:"0bda2302",67:"584c09e2",68:"95fc7ad2",69:"31236d04",70:"023d706e",71:"4cf11354",72:"8b18cbda",73:"e017e1e2",74:"8b280f2c",75:"b2db7377",76:"95bf9fa6",77:"27b83c8b",78:"ae0e30e6",79:"53ecb394",80:"4db4cc41",81:"fcb8ddf2",82:"4fbc8e99",83:"81369d00",84:"e2fea302",85:"22b06920",86:"ee13ab25",87:"e104d1ba",88:"28103e06",89:"9b4a6ea0",90:"44c4335b",91:"8870d935",92:"2abf0a23",93:"b9963d51",94:"e255782d",95:"0e5a7be7",96:"3e73258c",97:"dc868808",98:"1ce9adc7",99:"e6f7d9ce",100:"1c39c224",101:"8003e80a",102:"39f9e615",103:"c6f4daf5",104:"0cf6aa2e",105:"db97211d",106:"31f3d111",107:"3fdb00a5",108:"2cdcff52",109:"63733fbd",110:"3ac7ded8",111:"c3c15dc6",112:"d2619950",113:"6c49f81a",114:"69248555",115:"abb696f9",116:"afc118fd",117:"61765691",118:"ed87be87",119:"e9351a70",120:"2f6f2d13",121:"3a338abe",122:"4530de56",123:"52846dac",124:"8cbc918e",125:"6dea47a3",126:"b6c9a0c2",127:"0dc60a0f",128:"7f38616e",129:"bf21a6e9",130:"0486a329",131:"fc6666dd"}[e]+".chunk.js"}(e);var b=new Error;r=function(c){o.onerror=o.onload=null,clearTimeout(u);var f=a[e];if(0!==f){if(f){var d=c&&("load"===c.type?"missing":c.type),t=c&&c.target&&c.target.src;b.message="Loading chunk "+e+" failed.\n("+d+": "+t+")",b.name="ChunkLoadError",b.type=d,b.request=t,f[1](b)}a[e]=void 0}};var u=setTimeout((function(){r({type:"timeout",target:o})}),12e4);o.onerror=o.onload=r,document.head.appendChild(o)}return Promise.all(c)},n.m=e,n.c=d,n.d=function(e,c,f){n.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,c){if(1&c&&(e=n(e)),8&c)return e;if(4&c&&"object"==typeof e&&e&&e.__esModule)return e;var f=Object.create(null);if(n.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:e}),2&c&&"string"!=typeof e)for(var d in e)n.d(f,d,function(c){return e[c]}.bind(null,d));return f},n.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(c,"a",c),c},n.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},n.p="/",n.oe=function(e){throw console.error(e),e};var o=this["webpackJsonprunelite.net"]=this["webpackJsonprunelite.net"]||[],b=o.push.bind(o);o.push=c,o=o.slice();for(var u=0;u<o.length;u++)c(o[u]);var i=b;f()}([])</script><script src="/static/js/2.fae22976.chunk.js"></script><script src="/static/js/main.75e060a7.chunk.js"></script></body></html>
